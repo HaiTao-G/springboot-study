@@ -13,6 +13,7 @@
     <!--子模块-->
     <modules>
         <module>springboot-junit</module>
+        <module>springboot-i18n</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
