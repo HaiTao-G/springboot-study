@@ -2,6 +2,7 @@ package com.haitao.util;
 
 import com.haitao.config.MyLocaleResolver;
 import lombok.extern.slf4j.Slf4j;
+import lombok.var;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.stereotype.Component;
