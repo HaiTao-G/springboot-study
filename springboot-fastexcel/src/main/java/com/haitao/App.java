@@ -36,26 +36,26 @@ public class App {
 //		};
 //	}
 
-    @Bean
-    public ApplicationRunner myRunner(MessageSource messageSource) {
-        return args -> {
-
-            InputStream inputStream = new FileInputStream("D:\\用户.xlsx");
-            Locale locale = new Locale("zh-CN");
-            List<User> userList = new ArrayList<>();
-            EasyExcelI18n.read(inputStream, User.class, new I18nAnalysisListener<User>(messageSource, locale, User.class) {
-                @Override
-                public void invoke(User user, AnalysisContext context) {
-                    userList.add(user);
-                }
-
-                @Override
-                public void doAfterAllAnalysed(AnalysisContext context) {
-
-                }
-            }).sheet().doRead();
-
-            System.out.println(userList);
-        };
-    }
+//    @Bean
+//    public ApplicationRunner myRunner(MessageSource messageSource) {
+//        return args -> {
+//
+//            InputStream inputStream = new FileInputStream("D:\\用户.xlsx");
+//            Locale locale = new Locale("zh-CN");
+//            List<User> userList = new ArrayList<>();
+//            EasyExcelI18n.read(inputStream, User.class, new I18nAnalysisListener<User>(messageSource, locale, User.class) {
+//                @Override
+//                public void invoke(User user, AnalysisContext context) {
+//                    userList.add(user);
+//                }
+//
+//                @Override
+//                public void doAfterAllAnalysed(AnalysisContext context) {
+//
+//                }
+//            }).sheet().doRead();
+//
+//            System.out.println(userList);
+//        };
+//    }
 }

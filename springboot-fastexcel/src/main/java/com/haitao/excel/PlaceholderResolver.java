@@ -1,13 +1,14 @@
-package com.haitao.fastexcelconfig;
-
-import cn.idev.excel.support.cglib.core.internal.Function;
+package com.haitao.excel;
 
 import java.util.Map;
 import java.util.Properties;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
+/**
+ * 占位符解析器
+ */
 public class PlaceholderResolver {
-
     /**
      * 默认前缀占位符
      */
@@ -145,4 +146,5 @@ public class PlaceholderResolver {
     public String resolveByProperties(String content, final Properties properties) {
         return resolveByRule(content, placeholderValue -> properties.getProperty(placeholderValue));
     }
+
 }
