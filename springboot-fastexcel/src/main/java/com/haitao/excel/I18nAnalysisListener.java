@@ -5,7 +5,6 @@ import cn.idev.excel.event.AnalysisEventListener;
 import cn.idev.excel.metadata.Head;
 import cn.idev.excel.read.metadata.property.ExcelReadHeadProperty;
 import cn.idev.excel.util.StringUtils;
-import com.haitao.fastexcelconfig.PlaceholderResolver;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
@@ -17,6 +16,7 @@ import java.util.Map;
 
 /**
  * 国际化excel数据读取监听者
+ *
  * @param <T>
  */
 @Slf4j
@@ -41,6 +41,7 @@ public abstract class I18nAnalysisListener<T> extends AnalysisEventListener<T> {
 
     /**
      * 每条数据解析后调用
+     *
      * @param data    one row value. It is same as {@link AnalysisContext#readRowHolder()}
      * @param context analysis context
      */
@@ -52,6 +53,7 @@ public abstract class I18nAnalysisListener<T> extends AnalysisEventListener<T> {
 
     /**
      * 所有数据解析完成后调用
+     *
      * @param context
      */
     @Override
